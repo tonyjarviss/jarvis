@@ -3,7 +3,7 @@ const axios = require("axios");
 async function getDetails(id) {
     try {
         const response = await axios.get(
-            `https://jarvisbot-nine.vercel.app/get?url=${id}`
+            `https://tera-hsnx.onrender.com/get?url=${id}`
         );
         return response.data;
     } catch (error) {
