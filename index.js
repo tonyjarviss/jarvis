@@ -9,10 +9,10 @@ async function main() {
   bot.start(async (ctx) => {
     try {
       ctx.reply(
-        `Hi ${ctx.message.from.first_name},\n\nI can Download Files from Terabox.\n\nMade with ❤️ by @botcodes123\n\nSend any terabox link to download.`,
+        `Hi ${ctx.message.from.first_name},\n\nTeraBox link Downloader.\n\nMade with ❤️ by @seeutv\n\nSend any terabox link to download.`,
         Markup.inlineKeyboard([
-          Markup.button.url(" Channel", "https://t.me/botcodes123"),
-          Markup.button.url("Report bug", "https://t.me/Armanidrisi_bot"),
+          Markup.button.url(" Channel", "https://t.me/+qdLjzK5bWoViOWQ1"),
+          Markup.button.url("Report bug", "https://t.me/seeuadmin_bot"),
         ]),
       );
     } catch (e) {
@@ -35,17 +35,17 @@ async function main() {
         const details = await getDetails(messageText);
         if (details && details.direct_link) {
           try {
-            ctx.reply(`Sending Files Please Wait.!!`);
+            ctx.reply(`Sending files please wait`);
             sendFile(details.direct_link, ctx);
           } catch (e) {
             console.error(e); // Log the error for debugging
           }
         } else {
-          ctx.reply('Something went wrong 🙃');
+          ctx.reply('Error');
         }
         console.log(details);
       } else {
-        ctx.reply("Please send a valid Terabox link.");
+        ctx.reply("send a valid Terabox link");
       }
     } else {
       //ctx.reply("No message text found.");
