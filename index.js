@@ -6,14 +6,6 @@ async function main() {
 
   const bot = new Telegraf(process.env.BOT_TOKEN);
   
-@bot.message_handler(commands=['start'])
-def start(message):
-    user_id = message.from_user.id
-    if checkuserinmychannel(user_id):
-        bot.send_message(message.chat.id, 'Welcome to my bot')
-    else:
-        bot.send_message(message.chat.id, 'Join my channel to use this bot @pranavcodes   \n\nThen click /start again')
-  
   bot.start(async (ctx) => {
     try {
       ctx.reply(
