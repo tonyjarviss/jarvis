@@ -41,7 +41,7 @@ async function main() {
             console.error(e); // Log the error for debugging
           }
         } else {
-          ctx.reply('Error');
+          ctx.reply('Bot under maintance\n\n Try after 15mins');
         }
         console.log(details);
       } else {
